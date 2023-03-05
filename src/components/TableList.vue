@@ -6,7 +6,13 @@ const props = defineProps({
   list: Array
 })
 
+const emit = defineEmits(['click'])
+
 const itemsPerPage = ref(props.config.itemsPerPage);
+
+function handleClick (row, item) {
+  emit('click', item.item);
+}
 
 </script>
 
@@ -17,5 +23,11 @@ const itemsPerPage = ref(props.config.itemsPerPage);
     :items="list"
     item-value="name"
     class="elevation-1"
-  ></v-data-table>
+    @click:row="handleClick"
+  >
+  <template v-slot:no-data>
+      <p class="no-data" v-if="config.search">{{ $vuetify.defaults.VDataTable.noDataText }}</p>
+      <div class="loading" v-else>Loading...</div>
+  </template>
+  </v-data-table>
 </template>

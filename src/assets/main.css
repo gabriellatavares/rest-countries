@@ -8,3 +8,11 @@
   font-weight: normal;
 }
 
+.v-data-table__tr {
+  cursor: pointer;
+}
+
+.no-data,
+.loading {
+  margin: 16px;
+}
