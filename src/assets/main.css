@@ -2,7 +2,7 @@
 
 #app {
   max-width: 1280px;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
 
   font-weight: normal;
@@ -15,4 +15,39 @@
 .no-data,
 .loading {
   margin: 16px;
+  font-weight: 600;
+  color: gray;
+}
+
+.header {
+  display: flex;
+  gap: 32px;
+  justify-content: right;
+}
+
+
+.header div {
+  max-width: 300px;
+  width: 100%;
+}
+
+div.v-table {
+  border-radius: 8px;
+}
+
+.v-data-table-header__content > span {
+  font-weight: 600;
+}
+
+.v-text-field input {
+  font-size: 14px;
+}
+
+span {
+  display: flex;
+  gap: 4px;
+}
+
+.borders p {
+  font-weight: 500;
 }

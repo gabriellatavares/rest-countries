@@ -52,7 +52,9 @@ function open(country) {
 </script>
 
 <template>
-  <SelectDropdown :options="config.regions" :label="config.regionLabel" :selected="config.filter" @update="filter"></SelectDropdown>
-  <SearchInput :search-prop="config.search" @update="search"></SearchInput>
+  <div class="header">
+    <SelectDropdown :options="config.regions" :label="config.regionLabel" :selected="config.filter" @update="filter"></SelectDropdown>
+    <SearchInput :search-prop="config.search" @update="search"></SearchInput>
+  </div>
   <TableList :config="config" :list="filteredCountries.list" @click="open"></TableList>
 </template>

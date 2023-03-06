@@ -19,6 +19,7 @@ function handleClick (row, item) {
 <template>
   <v-data-table
     v-model:items-per-page="itemsPerPage"
+    height="70vh"
     :headers="config.headers"
     :items="list"
     item-value="name"
